@@ -2,8 +2,8 @@ import { IonCard, IonContent, IonHeader, IonPage, IonToolbar,IonButton, IonImg }
 
 import ExploreContainer from "../components/ExploreContainer";
 
-  const questions: React.FC = () => {
-    
+  const Home: React.FC = () => {
+    const goTo=(path:string) => {}
     return (
       <IonPage>
         <IonHeader>
@@ -19,12 +19,12 @@ import ExploreContainer from "../components/ExploreContainer";
           <div className='music'>  Music the voice of soul</div>
             </div>
             <div className="line"></div>
-          <IonCard className='card'>
-           
-          </IonCard>
+       <div>
+          <IonButton className='get-started-btn' onClick={ e => goTo('/Signup')}>Get Started</IonButton>
+          </div>
           <ExploreContainer />
         </IonContent>
       </IonPage>
     );
   };
-  export  default questions;
+  export  default Home;
