@@ -1,30 +1,19 @@
-import { IonCard, IonContent, IonHeader, IonPage, IonToolbar,IonButton, IonImg } from '@ionic/react';
-
+import { IonAvatar, IonButton, IonCard, IonContent, IonImg, IonItem, IonLabel, IonPage, IonText,  } from '@ionic/react';
+import './Home.css';
 import ExploreContainer from "../components/ExploreContainer";
-
-  const questions: React.FC = () => {
+import img from 'C:/Users/KastooriDasari/Desktop/React/Music-Application/src/image/logo-removebg-preview.png';
+  const Home: React.FC = () => {
     
     return (
-      <IonPage>
-        <IonHeader>
-          {/* <IonToolbar color="Primary">PodBean</IonToolbar> */}
-          
-        </IonHeader>
-        <IonContent fullscreen>
-         <div> <IonImg className='image' src='assets/images/506405-arijit 1.jpg'>
-          </IonImg></div>
-          <div className='text'>
-           <div className='welcome'> Welcome to </div>
-          <div className='padbean'> PadBean</div>
-          <div className='music'>  Music the voice of soul</div>
-            </div>
-            <div className="line"></div>
-          <IonCard className='card'>
-           
-          </IonCard>
-          <ExploreContainer />
+      <IonPage className='ion-page'>
+        <IonContent fullscreen className='ion-content'>
+      <div className='const'>
+        <IonImg src={img} alt=" " className='top-img'></IonImg>
+        <IonLabel className='text' color={'light'} style={{fontWeight: "bold"}}>SKY Music</IonLabel>
+        <IonButton routerLink='/signin' className='get-started-btn' shape='round' color={'orange'} >Get Started</IonButton>
+        </div>
         </IonContent>
       </IonPage>
     );
   };
-  export  default questions;
+  export  default Home;

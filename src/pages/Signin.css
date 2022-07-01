@@ -1,0 +1,101 @@
+.ion-content {
+    --background: url(C:/Users/KastooriDasari/Desktop/React/Music-Application/public/assets/images/bg-img.jpg);
+    text-align: center;
+    height: 69vh!important;
+  }
+
+  .text1{
+    position: absolute;
+width: 156px;
+height: 24px;
+left: 65px;
+top: 200px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+  }
+  .text2{
+    position: absolute;
+width: 100px;
+height: 36px;
+left: 95px;
+top: 230px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 10px;
+
+color: #FFFFFF;
+  }
+  .psw{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    left: 15px;
+    right: 15px;
+top: 320px;
+
+background: orange;
+border-radius: 3px;
+  }
+
+  .email{
+    position: absolute;
+    width: 250px;
+height: 30px;
+left: 15px;
+right: 15px;
+top: 270px;
+
+background: orange;
+border-radius: 3px;
+  }
+  .signin-btn{
+    /* position: absolute;
+    width: 130px;
+    height: 35px;
+    left: 65px;
+    top: 375px;
+    border-radius: 50px; */
+    width: 130px;
+    height: 35px;
+    left: 65px;
+    top: 375px;
+    position: absolute;
+    background: black;
+    border-radius: 50px;
+  }
+  .text3{
+    position: absolute;
+width: 236px;
+height: 18px;
+left: 15px;
+top: 450px;
+color: #FFFFFF;
+font-size: 10px;
+
+  }
+  .text-facebook{
+  position: absolute;
+width: 129px;
+height: 38px;
+left: 65px;
+top: 490px;
+color: #FFFFFF;
+}
+.link{
+    color:orange;
+}
+.icon{
+    margin-top: 470px;
+    position: absolute;
+    margin-left: 90px;
+
+}
