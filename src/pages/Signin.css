@@ -3,40 +3,6 @@
     text-align: center;
     height: 69vh!important;
   }
-  
-  .email{
-    position: absolute;
-    width: 250px;
-height: 30px;
-left: 15px;
-right: 15px;
-top: 280px;
-
-background: orange;
-border-radius: 3px;
-  }
-  .psw{
-    position: absolute;
-    width: 250px;
-    height: 30px;
-    left: 15px;
-    right: 15px;
-top: 330px;
-
-background: orange;
-border-radius: 3px;
-  }
-  .cpsw{
-    position: absolute;
-    width: 250px;
-    height: 30px;
-    left: 15px;
-    right: 15px;
-top: 380px;
-
-background: orange;
-border-radius: 3px;
-  }
 
   .text1{
     position: absolute;
@@ -63,22 +29,35 @@ top: 230px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
-font-size: 25px;
+font-size: 30px;
 line-height: 10px;
 
 color: #FFFFFF;
   }
-  .text3{
+  .psw{
     position: absolute;
-width: 236px;
-height: 18px;
-left: 15px;
-top: 470px;
-color: #FFFFFF;
-font-size: 10px;
+    width: 250px;
+    height: 30px;
+    left: 15px;
+    right: 15px;
+top: 320px;
 
+background: orange;
+border-radius: 3px;
   }
-  .signup-btn{
+
+  .email{
+    position: absolute;
+    width: 250px;
+height: 30px;
+left: 15px;
+right: 15px;
+top: 270px;
+
+background: orange;
+border-radius: 3px;
+  }
+  .signin-btn{
     /* position: absolute;
     width: 130px;
     height: 35px;
@@ -88,15 +67,35 @@ font-size: 10px;
     width: 130px;
     height: 35px;
     left: 65px;
-    top: 420px;
+    top: 375px;
     position: absolute;
     background: black;
     border-radius: 50px;
   }
-  .text{
+  .text3{
+    position: absolute;
+width: 236px;
+height: 18px;
+left: 15px;
+top: 450px;
+color: #FFFFFF;
+font-size: 10px;
+
+  }
+  .text-facebook{
   position: absolute;
-width: 180px;
-height: 70px;
-left: 10px;
-top: 7px;
+width: 129px;
+height: 38px;
+left: 65px;
+top: 490px;
+color: #FFFFFF;
+}
+.link{
+    color:orange;
+}
+.icon{
+    margin-top: 470px;
+    position: absolute;
+    margin-left: 90px;
+
 }

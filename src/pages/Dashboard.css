@@ -1,0 +1,15 @@
+.text{
+position: absolute;
+width: 350px;
+height: 24px;
+left: 48px;
+top: 168px;
+color: #FFFFFF;
+}
+.list{
+position: absolute;
+width: 401px;
+height: 187px;
+left: 24px;
+top: 275px;
+}
