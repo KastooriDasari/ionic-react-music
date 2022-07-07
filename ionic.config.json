@@ -1,0 +1,7 @@
+{
+  "name": "SKY Music",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

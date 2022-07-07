@@ -1,0 +1,6 @@
+{
+	"appId": "com.skymusicptg.app",
+	"appName": "skymusic",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

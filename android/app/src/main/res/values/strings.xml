@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SKYMusic</string>
+    <string name="title_activity_main">SKYMusic</string>
+    <string name="package_name">com.skymusicptg.app</string>
+    <string name="custom_url_scheme">com.skymusicptg.app</string>
+</resources>

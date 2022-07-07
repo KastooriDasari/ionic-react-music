@@ -1,0 +1,90 @@
+.content-grid-in{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh;
+    font-family: Calibri;
+    
+}
+.ion-content{
+    --background:#696460!important;
+    height: 100%;
+
+}
+.content-grid-row1{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+}
+.content-grid-row2{
+    display: flex;
+    justify-content: center;
+   
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+    .signin-top-img{
+    margin:auto;
+    margin-top: 100px;
+        size: 10px;
+        width: 150px;
+    height: 150px;
+    }
+    .email{
+        --background:#e08d21!important;
+      margin-right: 20px;
+      margin-left: 20px;
+        height: 30px;
+        color: white;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+    .password{
+        --background:#e08d21!important;
+        margin-right: 20px;
+      margin-left: 20px;
+    
+        height: 30px;
+        color: white;
+        border-radius: 3px;
+    }
+    .content-grid-row5{
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .signin-btn{
+        --background:#e08d21!important;
+        /* margin:auto; */
+        height: 30px;
+     
+    }
+    .signout-btn{
+        --background:#e08d21!important;
+        /* margin:auto; */
+        height: 30px;
+       
+    }
+    .text{
+        color: white;
+        justify-content: center;
+        margin-top: 5px;
+        
+    }
+    .icons{
+        justify-content: center;
+        margin-top: 40px;
+        
+    }
+    .link{
+        color:orange;
+    }
+    /* .col-1{
+        margin-left:40px!important;
+    } */
