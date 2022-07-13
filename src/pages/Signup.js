@@ -7,7 +7,9 @@ import {
   IonLabel,
   IonButton,
   IonImg,
+  
   useIonRouter,
+  useIonLoading,
   useIonAlert,
   useIonToast,
   // alertOutline
@@ -17,7 +19,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import {UserAuth} from '../context/AuthContext';
-import img from "C:/Users/KastooriDasari/Desktop/sky-music/src/Images/logo-removebg-preview.png";
+import img from "../Images/logo.png";
 import { alert } from "ionicons/icons";
 const SignUp = () => {
   
@@ -40,6 +42,8 @@ const SignUp = () => {
   const [cpassword, setCPassword] = useState("");
   const [error, setError] = useState("");
   const { createUser, currentUser } = UserAuth();
+  const [showPresent,showDismiss] = useIonLoading();
+
   const router = useIonRouter();
   async function handleAlert(message) {
     presentAlert({
@@ -56,57 +60,7 @@ const SignUp = () => {
     setPassword("");
   };
 
-  //  console.log(email);
-  // const clearInputs =() =>{
-  //     setEmail('');
-  //     setPassword('');
-  //     setCPassword('');
-  //   }
-  //   const clearErrors = () => {
-  //     setEmailError('');
-  //     setPasswordError('');
-  //   }
-  //   const authlistener = () => {
-  //     firebaseApp.auth().onAuthStateChanged(user => {
-  //       if (user) {
-  //         clearInputs();
-
-  //       }
-  //       else {
-  //         setEmail("");
-  //       }
-  //     });
-  //   };
-  //   useEffect(() => {
-  //     authlistener();
-  //   }, []);
-  //   const handleSignup = () => {
-  //     clearErrors();
-  //     if (password === cpassword) {
-  //     firebaseApp.auth().createUserWithEmailAndPassword(email, password,cpassword).then(()=>{router.push("/dashboard")})
-  //     .then(() => {
-
-  //         handleToast("Signedin successfully");
-
-  //       })
-
-  //     .catch((err) => {
-  //         switch (err.code) {
-  //           case "auth/email-already-in-use":
-  //           case "auth/invalid-email":
-
-  //             setEmailError(err.message);
-  //             break;
-  //           case "auth/weak-password":
-  //             setPasswordError(err.message);
-  //             break;
-  //         }
-  //       });
-  //     }else{
-  //       handleAlert(emailError)
-  //     }
-  //       clearInputs();
-  //   };
+  
   const handleSignup = async (e) => {
     var atposition = email.indexOf("@");
 
@@ -132,17 +86,25 @@ const SignUp = () => {
       handleButtonClick("Please Enter Correct Email");
     } else {
       try {
+        showPresent({
+          message: 'Please wait...',
+          duration: 1000,
+    
+        })
         await createUser(email, password);
+       
         handleButtonClick(name + " " + "user successfully signedup");
         clearInputs();
         router.push("/signin");
       } catch (e) {
         setError(e.message);
+        showDismiss();
+        clearInputs();
         handleAlert(e.message);
       }
     }
   };
-
+  
   return (
     <IonPage>
       <IonContent fullscreen className="ion-content">
@@ -198,7 +160,7 @@ const SignUp = () => {
           </IonRow>
           <IonRow className="signup-grid-row9">
             <IonLabel>Back to &nbsp;</IonLabel>{" "}
-            <Link to="/Signin" className="signin-link">
+            <Link to="/Signin" className="signin-link" onClick={clearInputs}>
               Sign In
             </Link>
           </IonRow>

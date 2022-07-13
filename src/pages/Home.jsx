@@ -1,5 +1,5 @@
 import { IonContent, IonGrid, IonRow, IonPage,IonImg, IonButton  } from '@ionic/react';
-import img from 'C:/Users/KastooriDasari/Desktop/sky-music/src/Images/logo-removebg-preview.png'
+import img from '../Images/logo.png'
 import './Home.css';
 
 const Home = () => {

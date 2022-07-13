@@ -10,12 +10,14 @@ import {
   IonGrid,
   IonImg,
   IonCol,
+  useIonLoading,
   useIonAlert,
   useIonToast,
+ 
 } from "@ionic/react";
 import "./Signin.css";
 import { UserAuth } from "../context/AuthContext";
-import img from "C:/Users/KastooriDasari/Desktop/sky-music/src/Images/logo-removebg-preview.png";
+import img from "../Images/logo.png";
 import { logoFacebook, logoGoogle, logoTwitter } from "ionicons/icons";
 import {  useState } from "react";
 
@@ -122,11 +124,13 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const [present, dismiss] = useIonToast();
   const [presentAlert] = useIonAlert();
+ const [showPresent,showDismiss] = useIonLoading();
+ 
 
   async function handleButtonClick(message) {
     present({
       message: message,
-      duration: 2000,
+      duration: 5000,
       position: "top",
       color: "light",
       mode: "ios",
@@ -151,8 +155,12 @@ const SignIn = () => {
   }
 
   const handleSignin = async (e) => {
+   
     var atposition = email.indexOf("@");
     var dotposition = email.lastIndexOf(".");
+   
+    
+   
     if (email == null || email === "" || password == null || password === "") {
       handleButtonClick("Fill the required fields");
     } else if (password.length < 6) {
@@ -165,18 +173,27 @@ const SignIn = () => {
       handleButtonClick("Please enter correct email");
     } else {
       try {
+        showPresent({
+          message: 'Please wait...',
+          duration: 1000,
+    
+        })
         await signIn(email, password);
+      
         handleButtonClick("Login successful");
         clearInputs();
        
         router.push("/dashboard");
       } catch (e) {
+       
         setError(e.message);
+        showDismiss();
+        clearInputs();
         handleAlert(e.message);
       }
     }
   };
-
+  
   return (
     <IonPage>
       <IonContent fullscreen className="ion-content">
@@ -216,10 +233,11 @@ const SignIn = () => {
             <IonCol >
             <IonButton
               className="signin-btn ion-text-capitalize" 
-              onClick={handleSignin}
+              onClick={handleSignin }
             >
               SignIn
             </IonButton>
+           
             </IonCol>
             {/* <IonCol size="md">
             <IonButton  
@@ -233,7 +251,7 @@ const SignIn = () => {
           <IonRow className="text">
             <IonLabel className="text3">
               Don't have account ?{" "}
-              <Link to="/signup" className="link">
+              <Link to="/signup" className="link" onClick={clearInputs}>
                 Sign Up
               </Link>{" "}
             </IonLabel>

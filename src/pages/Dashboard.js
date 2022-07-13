@@ -11,6 +11,8 @@ import {
   IonTabBar,
   useIonRouter,
   IonGrid,
+  IonSlides,
+  IonSlide,
   IonImg,
   IonSearchbar,
   IonCard,
@@ -23,38 +25,15 @@ import { home,albumsOutline,heart,personAddOutline} from 'ionicons/icons';
 
 import "./Dashboard.css";
 const Dashboard = () => {
-    // let router = useIonRouter();
-    // const handleToast = async (err) => {
-    //     const toast = await toastController.create({
-    //       color: "light",
-    //       position: "bottom",
-    //       duration: 1000,
-    //       message: err,
-    //       translucent: false,
-    //       showCloseButton: true,
-    //     });
-    
-    //     await toast.present();
-    
-    //   };
-    // const handleSignout=() =>{
-    //     firebaseApp.auth().signOut().then(()=>{router.push('/home');
-    //   }).then(()=>{
-    //     handleToast("signout successfully");
-    //   });
-    //   };
+ 
   return (
     <IonPage>
       <IonContent className="ion-content">
         <IonGrid className="content-grid">
           <IonRow>
-            {/* <IonCol><IonIcon className="arrowBackOutline " icon={arrowBackOutline} routerLink="./Signin"></IonIcon></IonCol> */}
             <IonCol >
               <IonSearchbar></IonSearchbar>
             </IonCol>
-            {/* <IonCol size="md"> */}
-              {/* <IonImg src={img} alt=" " className="top-img"></IonImg> */}
-            {/* </IonCol> */}
           </IonRow>
           <IonRow className="dashboard-row1">
             <IonCol>All</IonCol>
@@ -66,6 +45,7 @@ const Dashboard = () => {
             <IonCol className="dashboard-cards">
               <IonCard className="cards"></IonCard>
             </IonCol>
+        
             {/* <IonCol className="dashboard-cards">
               <IonCard className="cards"></IonCard>
             </IonCol>
@@ -76,6 +56,7 @@ const Dashboard = () => {
               <IonCard className="cards"></IonCard>
             </IonCol> */}
           </IonRow>
+          
           <IonRow>
           <IonButton  
             className="signout-btn ion-text-capitalize"
@@ -83,6 +64,9 @@ const Dashboard = () => {
           >
             SignOut
             </IonButton>
+          </IonRow>
+          <IonRow>
+          
           </IonRow>
         </IonGrid>
       </IonContent>
